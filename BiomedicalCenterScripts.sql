@@ -82,6 +82,7 @@ CREATE TABLE MedicoEspecialidad
 	IdEspecialidad int NOT NULL,
 	Descripcion varchar(50) null,
 	CONSTRAINT PK_MedicoEspecialidad PRIMARY KEY(IdMedico,IdEspecialidad)
+	--CONSTRAINT FK_Especialidad_IdEspecialidad FOREIGN KEY (IdEspecialidad) REFERENCES MedicoEspecialidad(IdMedico)
 )
 GO
 --Tabla pago
@@ -127,3 +128,9 @@ GO
 --Creando tipo de datos medico y paciente
 -- Create type medico from int not null
 -- Create type paciente from int not null
+
+--Agregar UNIQUE a la tabla clientedbo.Paciente en la columan nombre para evitar duplicados
+ALTER TABLE clientedbo.Paciente ADD CONSTRAINT UK_Paciente_Name UNIQUE(Nombre)
+GO
+SELECT * FROM clientedbo.Paciente
+DELETE FROM clientedbo.Paciente WHERE IdPaciente = 4

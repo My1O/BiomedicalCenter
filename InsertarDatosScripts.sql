@@ -45,4 +45,15 @@ GO
 INSERT INTO clientedbo.Paciente(Nombre, Apellido, IdPais)
 VALUES('Nicholas', 'Cage', 'SLV')
 GO
+INSERT INTO clientedbo.Paciente(Nombre, Apellido,FechaNacimiento,IdPais)
+VALUES('Elon','Musk', '2000-11-11','ECU')
+GO
+INSERT INTO clientedbo.Paciente(Nombre,IdPais)
+VALUES('Lian', 'ECU')
+GO
+INSERT INTO clientedbo.Paciente(Nombre,IdPais)
+VALUES('Rex', 'NIC')
+GO
 select * from clientedbo.Paciente
+
+select * from Pais
