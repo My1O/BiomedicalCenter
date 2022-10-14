@@ -29,8 +29,3 @@ END
 GO
 
 SELECT dbo.CalculateDivision(25,10)
-
-
-
-
-
